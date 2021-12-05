@@ -34,7 +34,7 @@
       background: #ffffff
       box-shadow:  11px 11px 32px #e3e3e3, -11px -11px 32px #ffffff
       box-sizing: border-box
-      widows: 300px
+      width: 300px
       margin-left: 15px
 
       input
@@ -74,17 +74,12 @@
 
    
 
-// @media (max-width: 1020px)
-//   .content-mat-toolbar
-
-//     .content-search
-//       flex-direction: column !important
-//       margin-left: 20px
-//       width: 100%
-
-//       .search-input
-//         widows: 300px
-
-//       .history-search
-//         max-width: 80%
-//         overflow-x: auto
+@media (max-width: 460px)
+  .conte-mat-toolbar
+    .content-search
+      width: 100%
+      justify-content: center
+      .search-input
+        margin-left: 0px
+    .logo-name
+      display: none

@@ -5,21 +5,19 @@
             <div class="items-mat-toolbar">
                <mat-toolbar>
                   <div class="d-flex align-items-center w-100">
-                     <div class="flex-grow-1">
+                     <div class="flex-grow-1 logo-name">
                         <span>Search GIPHY</span>
                      </div>
                
-                     <div>
-                        <div class="d-flex content-search">
-                           <div class="d-flex search-input rounded p-1">
-                              <input class="outlined-none rounded" type="searchInput" name="search" id="searchInput" 
-                                 [(ngModel)]="searchInput"
-                                 [matChipInputFor]="chipList"
-                                 [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
-                                 (matChipInputTokenEnd)="searchGif()"
-                                 >
-                              <button (click)="searchGif()" mat-button color="primary" class="rounded" id="searchButton">Buscar</button>
-                           </div>
+                     <div class="d-flex content-search">
+                        <div class="d-flex search-input rounded p-1">
+                           <input class="outlined-none rounded" type="searchInput" name="search" id="searchInput" 
+                              [(ngModel)]="searchInput"
+                              [matChipInputFor]="chipList"
+                              [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+                              (matChipInputTokenEnd)="searchGif()"
+                              >
+                           <button (click)="searchGif()" mat-button color="primary" class="rounded" id="searchButton">Buscar</button>
                         </div>
                      </div>
                   </div>

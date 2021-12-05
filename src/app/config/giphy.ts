@@ -28,6 +28,9 @@ const itemGrid = (): Promise<HTMLElement> => {
     const div = document.createElement('div');
     div.classList.add('col');
     div.classList.add('m-1');
+    div.classList.add('item-grid-gif');
+    div.classList.add('d-flex');
+    div.classList.add('justify-content-center')
     resolve(div);
   });
 }
