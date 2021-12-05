@@ -1,0 +1,49 @@
+<div class="main-mat-toolbar">
+   <div class="spacer-head"> 
+      <div class="item-toolbar">
+         <div class="conte-mat-toolbar">
+            <div class="items-mat-toolbar">
+               <mat-toolbar>
+                  <div class="d-flex align-items-center w-100">
+                     <div class="flex-grow-1">
+                        <span>Search GIPHY</span>
+                     </div>
+               
+                     <div>
+                        <div class="d-flex content-search">
+                           <div class="d-flex search-input rounded p-1">
+                              <input class="outlined-none rounded" type="searchInput" name="search" id="searchInput" 
+                                 [(ngModel)]="searchInput"
+                                 [matChipInputFor]="chipList"
+                                 [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+                                 (matChipInputTokenEnd)="searchGif()"
+                                 >
+                              <button (click)="searchGif()" mat-button color="primary" class="rounded" id="searchButton">Buscar</button>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </mat-toolbar>
+            </div>
+         </div>
+         <div class="w-100 content-chip d-flex">
+            <mat-chip-list #chipList aria-label="History selection">
+               <div class="history-search mt-1">
+                  <div #historySearch class="conte-item-chip">
+                     <mat-chip *ngFor="let history of (gif$ | async).history" 
+                     [selectable]="selectable"
+                     [removable]="removable" 
+                     (click)="searchGif(history)"
+                     (removed)="remove(history)">
+                       {{history}}
+                       <button matChipRemove *ngIf="removable">
+                         <mat-icon>cancel</mat-icon>
+                       </button>
+                     </mat-chip>
+                  </div>
+               </div>
+            </mat-chip-list>
+         </div>
+      </div>
+   </div>
+</div>

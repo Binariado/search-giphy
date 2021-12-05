@@ -1,1 +1,22 @@
-<p>home works!</p>
+
+<div *ngIf="(gif$ | async).searching">
+   <div *ngIf="(gif$ | async).onlySearch === '' else headSearch"> 
+      <h1 class="fw-bold">Trending Gif</h1>
+   </div>
+   <ng-template #headSearch>
+      <div class="d-flex">
+         <h1 class="fw-bold">{{'Search: '}}</h1> 
+         <h1 class="fw-normal" style="margin-left: 0.5rem;"> {{(gif$ | async).onlySearch}}</h1>
+      </div>
+   </ng-template>
+</div>
+
+
+<div class="grid-gifs row">
+
+</div>
+
+<div *ngIf="(gif$ | async).searching else loading"> </div>
+<ng-template #loading>
+   <div>Loading...</div>
+</ng-template>

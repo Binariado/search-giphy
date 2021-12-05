@@ -1,0 +1,90 @@
+.main-mat-toolbar
+  position: relative
+  z-index: 1
+
+  .spacer-head
+    position: relative
+    height: 100px
+
+  .item-toolbar
+    position: fixed
+    z-index: 1
+    height: 106px
+    width: 100%
+    background-color: rgba(255, 255, 255, 0.3)
+    backdrop-filter: blur(10px)
+    -webkit-backdrop-filter: blur(10px)
+
+  .mat-toolbar-single-row
+    background-color: transparent
+
+  .conte-mat-toolbar
+    position: relative
+    height: 64px
+  
+  .items-mat-toolbar
+    position: fixed
+    width: 100%
+
+  .logo-gif
+    flex-grow: 1
+
+  .content-search
+    .search-input
+      background: #ffffff
+      box-shadow:  11px 11px 32px #e3e3e3, -11px -11px 32px #ffffff
+      box-sizing: border-box
+      widows: 300px
+      margin-left: 15px
+
+      input
+        border-color: transparent
+        border: 0px
+        background-color: transparent
+        box-sizing: border-box
+        margin-left: 1rem
+
+  .content-chip  
+    .history-search
+      max-width: 100%
+      height: 40px
+      position: relative
+      z-index: 1
+
+      .conte-item-chip
+        width: 100%
+        display: flex
+        overflow-x: auto
+        -ms-overflow-style: none
+        scrollbar-width: none  
+        height: 40px
+        position: fixed
+        margin-bottom: 0.4rem
+        background-color: transparent
+
+        .mat-chip-ripple
+          background-color: rgb(28 20 20 / 28%)
+          backdrop-filter: blur(10px)
+
+      .conte-item-chip::-webkit-scrollbar
+        display: none
+
+    .mat-chip-list-wrapper
+      margin: none !important
+
+   
+
+// @media (max-width: 1020px)
+//   .content-mat-toolbar
+
+//     .content-search
+//       flex-direction: column !important
+//       margin-left: 20px
+//       width: 100%
+
+//       .search-input
+//         widows: 300px
+
+//       .history-search
+//         max-width: 80%
+//         overflow-x: auto
