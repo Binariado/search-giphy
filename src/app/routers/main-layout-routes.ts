@@ -1,5 +1,9 @@
 import { Routes } from '@angular/router';
 
+/**
+ * MAIN_LAYOUT_ROUTES
+ * 
+ */
 export const MAIN_LAYOUT_ROUTES: Routes = [
   {
     path: '',
